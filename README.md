@@ -41,7 +41,7 @@ http://localhost:8000/
 进入文件夹，应用express生成器
 npm install express-generator -g
 express server
-cd myapp 
+cd server 
 npm install
 set DEBUG=myapp & npm start
 http://localhost:3000/
