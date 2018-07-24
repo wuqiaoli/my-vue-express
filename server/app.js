@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+//解决跨域
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -32,8 +32,18 @@ app.all('*', function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.get('/five/:id',(req,res)=>{
-	res.send('恭喜你访问成功')
+app.get('/five',(req,res)=>{
+  let result = {
+     data:200,
+     result:[
+       {id:1,name:'fff'},
+       {id:2,name:'fff'},
+       {id:3,name:'fff'},
+       {id:4,name:'fff'},
+     ],
+     msg:'请求成功'
+  }
+	res.send(result)
 })
 
 
