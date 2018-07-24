@@ -26,6 +26,29 @@ npm run e2e
 # run all tests
 npm test
 ```
+##环境搭建
+
+```bash
+
+# 前台
+npm install --global vue-cli
+vue init webpack my-project（项目名称，如：firstproject）
+npm install
+cd my-project（进入firstproject）
+npm run dev(运行)
+http://localhost:8000/
+# 后台
+进入文件夹，应用express生成器
+npm install express-generator -g
+express server
+cd myapp 
+npm install
+set DEBUG=myapp & npm start
+http://localhost:3000/
+注意：后台服务开启在server文件下启动npm start 在前台访问会出现跨域，因此设置一下，具体看serve/app.js
+在页面请求接口就ok了
+```
+
 ## 封装请求
 
 ``` bash
