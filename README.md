@@ -26,7 +26,7 @@ npm run e2e
 # run all tests
 npm test
 ```
-##环境搭建
+## 环境搭建
 
 ```bash
 
