@@ -46,7 +46,7 @@ npm install
 set DEBUG=myapp & npm start
 http://localhost:3000/
 注意：后台服务开启在server文件下启动npm start 在前台访问会出现跨域，因此设置一下，具体看serve/app.js
-在页面请求接口就ok了
+在页面请求接口就ok了，此时只是测试用，并没有连接数据库。后期都连接数据库。
 ```
 
 ## 封装请求
@@ -60,5 +60,30 @@ config -- dev.env.js 配置一下根路径
 ```
 
 
+## 引入全局样式
+``` bash
+新建styles目录,新建base.css
+在main.js 引入 import '@/styles/base.css'
+也可以建立多个.css最后再一个文件统一导入与导出
+```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 路由懒加载
+``` bash
+安装cross-env:npm install cross-env --save-dev
+使用babel 的 pluginsbabel-plugin-dynamic-import-node
+ npm install babel-plugin-dynamic-import-node --save-dev
+首先在package.json中增加BABEL_ENV: "dev": "cross-env BABEL_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+接着在.babelrc只能加入babel-plugin-dynamic-import-node这个plugins，并让它只有在development模式中才生效。
+ {
+  "env": {
+    "development": {
+      "plugins": ["dynamic-import-node"]
+    }
+  }
+}
+大功告成了，路由只要像平时一样写就可以了。
+  { path: '/login', component: () => import('@/views/login/index')}
+```
+
+
+

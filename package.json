@@ -5,7 +5,7 @@
   "author": "PC-20170905CGYU\\Administrator <1552044904@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "cross-env BABEL_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -15,6 +15,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.3",
+    "mint-ui": "^2.2.13",
+    "muse-ui": "^3.0.0-rc.6",
+    "muse-ui-message": "^0.2.0",
+    "muse-ui-toast": "^0.3.0",
+    "typeface-roboto": "0.0.54",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -35,6 +40,7 @@
     "chalk": "^2.0.1",
     "chromedriver": "^2.40.0",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.2.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^3.0.0",

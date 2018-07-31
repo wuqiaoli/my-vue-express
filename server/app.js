@@ -31,7 +31,7 @@ app.all('*', function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+//测试接口,在登录页面可以进行查看
 app.get('/five',(req,res)=>{
   let result = {
      data:200,
@@ -45,7 +45,7 @@ app.get('/five',(req,res)=>{
   }
 	res.send(result)
 })
-
+//end
 
 
 

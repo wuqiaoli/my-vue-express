@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import login from '@/views/a-login/index'
-
+//导航栏
+import menu from '@/views/nav/index'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
       path: '/login',
-      name: 'login',
-      component: login
+      component:menu,
+      redirect: '/login/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/login/index')
+          }
+      ]
     }
   ]
 })
