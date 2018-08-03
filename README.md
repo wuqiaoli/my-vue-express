@@ -66,8 +66,13 @@ config -- dev.env.js 配置一下根路径
 在main.js 引入 import '@/styles/base.css'
 也可以建立多个.css最后再一个文件统一导入与导出
 ```
-
-## 路由懒加载
+## 页面渲染
+``` bash	
+	导航栏作为一级路由
+	主体页面为二级路由
+	在nav新建组件App--main.vue,作为子路由渲染出口
+```
+## 路由配置及懒加载
 ``` bash
 安装cross-env:npm install cross-env --save-dev
 使用babel 的 pluginsbabel-plugin-dynamic-import-node
@@ -84,6 +89,22 @@ config -- dev.env.js 配置一下根路径
 大功告成了，路由只要像平时一样写就可以了。
   { path: '/login', component: () => import('@/views/login/index')}
 ```
+##路由测试
+``` bash
+    views----index---index.vue
+    router---index.js---配置路由
+    访问：http://localhost:8001/#/index/index
+    成功
+```
+## Cookie
+```bash
+参考地址：https://www.npmjs.com/package/js-cookie
+安装插件npm install js-cookie --save
+新建cookie.js统一管理cookie util--cookie.js
+具体见cookie.js
+Cookie ok
+```
 
+##状态管理vuex
 
 

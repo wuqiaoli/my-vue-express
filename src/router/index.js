@@ -16,6 +16,17 @@ export default new Router({
               component: () => import('@/views/login/index')
           }
       ]
+    },
+    {
+      path: '/index',
+      component:menu,
+      redirect: '/index/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/index/index')
+          }
+      ]
     }
   ]
 })
