@@ -68,9 +68,9 @@ config -- dev.env.js 配置一下根路径
 ```
 ## 页面渲染
 ``` bash	
-	导航栏作为一级路由
-	主体页面为二级路由
-	在nav新建组件App--main.vue,作为子路由渲染出口
+导航栏作为一级路由
+主体页面为二级路由
+在nav新建组件App--main.vue,作为子路由渲染出口
 ```
 ## 路由配置及懒加载
 ``` bash
@@ -89,12 +89,12 @@ config -- dev.env.js 配置一下根路径
 大功告成了，路由只要像平时一样写就可以了。
   { path: '/login', component: () => import('@/views/login/index')}
 ```
-##路由测试
+## 路由测试
 ``` bash
-    views----index---index.vue
-    router---index.js---配置路由
-    访问：http://localhost:8001/#/index/index
-    成功
+views----index---index.vue
+router---index.js---配置路由
+访问：http://localhost:8001/#/index/index
+成功
 ```
 ## Cookie
 ```bash
@@ -105,6 +105,5 @@ config -- dev.env.js 配置一下根路径
 Cookie ok
 ```
 
-##状态管理vuex
 
 
