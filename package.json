@@ -22,7 +22,9 @@
     "muse-ui-toast": "^0.3.0",
     "typeface-roboto": "0.0.54",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-amap": "^0.5.8",
+    "vue-router": "^3.0.1",
+    "vue-ztree": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -16,7 +16,6 @@ export default {
     mounted(){
       this.$nextTick(function () {
           setAdmin('123') ;
-          document.write(getAdmin())
       })
     },
     methods:{

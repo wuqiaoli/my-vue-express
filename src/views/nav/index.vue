@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    我是导航栏
+    
     <main-app></main-app>
   </div>
 </template>

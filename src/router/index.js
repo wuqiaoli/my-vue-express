@@ -8,14 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/login',
-      component:menu,
-      redirect: '/login/index',
-      children:[
-          {
-              path:'index',
-              component: () => import('@/views/login/index')
-          }
-      ]
+      component: () => import('@/views/login/index')
     },
     {
       path: '/index',
@@ -25,6 +18,28 @@ export default new Router({
           {
               path:'index',
               component: () => import('@/views/index/index')
+          }
+      ]
+    },
+    {
+      path: '/map',
+      component:menu,
+      redirect: '/map/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/amap/index')
+          }
+      ]
+    },
+    {
+      path: '/tree',
+      component:menu,
+      redirect: '/tree/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/tree/index')
           }
       ]
     }
