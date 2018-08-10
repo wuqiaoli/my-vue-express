@@ -1,27 +1,25 @@
 <template>
   <div class="wrap">
-    我是首页
-    <button @click="remove">点击删除cookie</button>
+     <p>vuex 组件之间共享共用的数据源 ---简称共享状态</p>
+     <count></count>
   </div>
 </template>
 <script>
-import {setAdmin,getAdmin,removeAdmin} from '@/util/cookie'
+import count from '@/components/count'
 export default {
+    components:{
+        count
+    },
     data(){
       return{
-
       }
     },
     mounted(){
       this.$nextTick(function () {
-          setAdmin('123') ;
       })
     },
     methods:{
-      remove(){
-         console.log('shan')
-         removeAdmin()
-      }
+      
     }
 }
 </script>

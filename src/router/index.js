@@ -42,6 +42,29 @@ export default new Router({
               component: () => import('@/views/tree/index')
           }
       ]
-    }
+    },
+    {
+      path: '/vuexa',
+      component:menu,
+      redirect: '/vuexa/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/vuexa/index')
+          }
+      ]
+    },
+    {
+      path: '/errorLog',
+      component:menu,
+      redirect: '/errorLog/index',
+      children:[
+          {
+              path:'index',
+              component: () => import('@/views/errorLog/index')
+          }
+      ]
+    },
+
   ]
 })

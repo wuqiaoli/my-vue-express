@@ -24,7 +24,8 @@
     "vue": "^2.5.2",
     "vue-amap": "^0.5.8",
     "vue-router": "^3.0.1",
-    "vue-ztree": "^1.0.0"
+    "vue-ztree": "^1.0.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
