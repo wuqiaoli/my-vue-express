@@ -14,8 +14,8 @@
 
     <div class="first">
      	<h4>计算属性mapGetters </h4>
-	    <button @click="add">点击我A模块---统一加10</button>
-	    <!-- <button @click="reduce">点击B模块---统一减一</button> -->
+	    <!-- <button @click="add">点击我A模块统一加10</button> -->
+	    <!-- <button @click="reduce">点击B模块统一减一</button> -->
     </div>
   </div>
 </template>
@@ -31,22 +31,22 @@ export default {
  //   	 	mark (){
  //      		return this.$store.state.other.mark
  //   	 	}
- //  	},
+ // }
+    // computed:mapState({
+	   //  	test : state => state.errorLog.test,
+	   //  	mark : state => state.other.mark
+    // }),
     computed:{
-   		...mapGetters(['add']),
-    },
-    computed:mapState({
-	    	test : state => state.errorLog.test,
+    	...mapState({
+    		test : state => state.errorLog.test,
 	    	mark : state => state.other.mark
-    })
-    ,
+    	}),
+    	...mapGetters(["test"]),
+    },
     data(){
       return{
 
       }
-    },
-    mounted(){
-      
     },
    	methods:{
         ...mapMutations([ 'modefiedMark']),

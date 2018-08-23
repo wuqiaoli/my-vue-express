@@ -5,7 +5,7 @@ const errorLog = {
 	//计算属性
 	getters:{
 		add:state => {
-			return state.test += 10
+			return state.test += 100;
 		}
 	},
 	//修改状态mutations:{

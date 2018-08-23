@@ -2,12 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import errorLog from './modules/errorLog'
 import other from './modules/other'
+import permission from './modules/permission'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	modules:{
 		errorLog,
-		other
+		other,
+		permission
 	},
 	// getters
 })

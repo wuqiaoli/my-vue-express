@@ -104,6 +104,18 @@ router---index.js---配置路由
 具体见cookie.js
 Cookie ok
 ```
-
+## sass配置
+```bash
+npm install -g cnpm --registry=https://registry.npm.taobao.org  （安装淘宝镜像）用淘宝镜像快！而且安装的时候减少出错！
+cnpm install node-sass --save-dev  //安装node-sass
+cnpm install sass-loader --save-dev  //安装sass-loader
+cnpm install style-loader --save-dev
+快键方式  cnpm install sass-loader node-sass vue-style-loader --D
+webpack.base.config.js配置  
+{
+test: /\.scss$/,
+loaders: ["style", "css", "sass"]
+}
+在需要用到sass的地方添加lang=scss 即可
 
 
