@@ -4,6 +4,7 @@ html,body{
     padding: 0;
 }
 .wrap{
+	position: relative;
 	max-width: 750px;
 	min-width: 320px;
 	height: 100%;

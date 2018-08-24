@@ -42,7 +42,7 @@
     methods: {
       close() {
         this.imgIndex = null;
-        this.$emit("close");
+        this.$emit("close"); //子组件传值父组件
       },
       onPrev() {
         if (this.imgIndex > 0) {

@@ -102,6 +102,19 @@ export const publicRouter = [
           }
       ]
     },
+     {
+      path: '/sanck',
+      component:menu,
+      redirect: '/sanck/index',
+      name:'sanck',
+      children:[
+          {
+              path:'index',
+              name:'sanck',
+              component: () => import('@/views/sanck/index')
+          }
+      ]
+    },
 ]
 
 
