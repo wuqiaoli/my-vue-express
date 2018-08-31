@@ -8,12 +8,12 @@
    					<div class="login_small_head">
    						<img class="login_small_head_pic" :src="site.url" alt="" v-for="(site,index) in list" :ket="index">
    					</div>
-   					<div class="login_small_input">
+   				</div>
+   				<div class="login_small_input">
    						<img class="login_small_pic" src="../../assets/ipt.png" alt="">
    						<input class="login_small_text" type="text" v-model="text" placeholder="请输入你的聊天名">
    					</div>
-   				</div>
-   				<div class="login_btn">
+   				<div class="login_btn" @click="go">
    					进入聊天室
    				</div>
    			</div>
@@ -40,7 +40,9 @@
 			}
 		},
 		methods:{
-
+			go(){
+				this.$router.push({ path: '/chat/index'})
+			}
 		}
 	}
 </script>
@@ -52,43 +54,43 @@
     justify-content:center;
     &_con{
     	width:400px;
+    	min-width:400px;
         height:700px;
         border-radius:4px;
     	box-shadow: -2px 5px 20px #969696;
     	background: url(../../assets/bg.jpg) no-repeat center center;
     }
     &_wrap{
-    	margin:150px 30px;
-    	height:400px;
+    	margin:203px 30px;
     }
     &_title{
 		margin:0;
-		line-height:40px;
 		font-size:18px;
+		line-height:16px;
 		font-weight: 500;
     	text-align:center;
     }
     &_small{
-    	height:320px;
     	&_head{
     		width:240px;
-    		margin:58px auto;
+    		margin:0 auto;
     		&_pic{
     			display:inline-block;
     			width:40px;
     			height:40px;
-    			margin:4px;
-
+    			margin:8px 4px;
+				cursor:pointer;
     		}
     	}
     	&_title{
     		font-size:12px;
-    		margin-top:40px;
+    		margin-bottom:0px;
     		text-align:center;
+    		margin:41px 0 10px 0;
     	}
     	&_input{
-    		margin-bottom:40px;
     		height:40px;
+    		margin-bottom:6px;
     	}
     	&_pic{
 			display:inline-block;
@@ -115,7 +117,11 @@
 		border:1px solid #372926;
 		border-radius:4px;
     	text-align:center;
-
+    	cursor: pointer;
+    	&:hover{
+    		background:#372926;
+    		color:#fff;
+    	}
     }
 }
 
