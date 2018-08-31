@@ -115,6 +115,25 @@ export const publicRouter = [
           }
       ]
     },
+    //聊天室
+     {
+      path: '/chat',
+      component:menu,
+      redirect: '/chat/login',
+      name:'vuex',
+      children:[
+          {
+              path:'login',
+              name:'chatLogin',
+              component: () => import('@/views/chat/login')
+          },
+          {
+              path:'index',
+              name:'路由',
+              component: () => import('@/views/chat/index')
+          }
+      ]
+    }
 ]
 
 

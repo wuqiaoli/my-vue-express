@@ -2,6 +2,7 @@
 	 <transition :name="active">
  		<div class="snackbar">
  			<div class="snackbar_text" :style="{ background: activeColor,color:color}">{{text}}</div>
+      <slot></slot>
  		</div>
 	 </transition>
 </template>
